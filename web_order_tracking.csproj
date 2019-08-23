@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41B4BE4A-4D3D-487D-973C-509F16FC5D7C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>web_order_tracking</RootNamespace>
+    <AssemblyName>web_order_tracking</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADMIN\add_designation.aspx" />
+    <Content Include="ADMIN\add_district.aspx" />
+    <Content Include="ADMIN\admin_home.aspx" />
+    <Content Include="ADMIN\confirm_company.aspx" />
+    <Content Include="ADMIN\confirm_user.aspx" />
+    <Content Include="ADMIN\css\bootstrap.min.css" />
+    <Content Include="ADMIN\css\colorfulTab.min.css" />
+    <Content Include="ADMIN\css\font-awesome.min.css" />
+    <Content Include="ADMIN\css\icons.css" />
+    <Content Include="ADMIN\css\jQuery.lightninBox.css" />
+    <Content Include="ADMIN\css\style.css" />
+    <Content Include="ADMIN\css\typo.css" />
+    <Content Include="ADMIN\images\australia.png" />
+    <Content Include="ADMIN\images\banner1-1.jpg" />
+    <Content Include="ADMIN\images\banner1-2.jpg" />
+    <Content Include="ADMIN\images\banner1-3.jpg" />
+    <Content Include="ADMIN\images\banner1-4.jpg" />
+    <Content Include="ADMIN\images\banner1.jpg" />
+    <Content Include="ADMIN\images\banner2.jpg" />
+    <Content Include="ADMIN\images\banner3.jpg" />
+    <Content Include="ADMIN\images\bg.jpg" />
+    <Content Include="ADMIN\images\cart.png" />
+    <Content Include="ADMIN\images\cd-top-arrow.svg" />
+    <Content Include="ADMIN\images\check.png" />
+    <Content Include="ADMIN\images\close.png" />
+    <Content Include="ADMIN\images\confirm.png" />
+    <Content Include="ADMIN\images\cust-img1.jpg" />
+    <Content Include="ADMIN\images\cust-img2.jpg" />
+    <Content Include="ADMIN\images\cust-img3.jpg" />
+    <Content Include="ADMIN\images\cust-img4.jpg" />
+    <Content Include="ADMIN\images\cust-img5.jpg" />
+    <Content Include="ADMIN\images\cust-img6.jpg" />
+    <Content Include="ADMIN\images\delivery.png" />
+    <Content Include="ADMIN\images\dispatch.png" />
+    <Content Include="ADMIN\images\eye.png" />
+    <Content Include="ADMIN\images\france.png" />
+    <Content Include="ADMIN\images\germany.png" />
+    <Content Include="ADMIN\images\monitor.png" />
+    <Content Include="ADMIN\images\next.png" />
+    <Content Include="ADMIN\images\prev.png" />
+    <Content Include="ADMIN\images\process.png" />
+    <Content Include="ADMIN\images\quality.png" />
+    <Content Include="ADMIN\images\serv-img1.jpg" />
+    <Content Include="ADMIN\images\serv-img2.jpg" />
+    <Content Include="ADMIN\images\serv-img3.jpg" />
+    <Content Include="ADMIN\images\serv-img4.jpg" />
+    <Content Include="ADMIN\images\service1.jpg" />
+    <Content Include="ADMIN\images\service2.jpg" />
+    <Content Include="ADMIN\images\service3.jpg" />
+    <Content Include="ADMIN\images\shop.png" />
+    <Content Include="ADMIN\images\team1.jpg" />
+    <Content Include="ADMIN\images\team2.jpg" />
+    <Content Include="ADMIN\images\team3.jpg" />
+    <Content Include="ADMIN\images\team4.jpg" />
+    <Content Include="ADMIN\images\team5.jpg" />
+    <Content Include="ADMIN\images\team6.jpg" />
+    <Content Include="ADMIN\images\truck.png" />
+    <Content Include="ADMIN\images\uk.png" />
+    <Content Include="ADMIN\images\usa.png" />
+    <Content Include="ADMIN\images\work1.jpg" />
+    <Content Include="ADMIN\images\work10.jpg" />
+    <Content Include="ADMIN\images\work11.jpg" />
+    <Content Include="ADMIN\images\work12.jpg" />
+    <Content Include="ADMIN\images\work2.jpg" />
+    <Content Include="ADMIN\images\work3.jpg" />
+    <Content Include="ADMIN\images\work4.jpg" />
+    <Content Include="ADMIN\images\work5.jpg" />
+    <Content Include="ADMIN\images\work6.jpg" />
+    <Content Include="ADMIN\images\work7.jpg" />
+    <Content Include="ADMIN\images\work8.jpg" />
+    <Content Include="ADMIN\images\work9.jpg" />
+    <Content Include="ADMIN\index.html" />
+    <Content Include="ADMIN\js\bgfader.js" />
+    <Content Include="ADMIN\js\bootstrap.min.js" />
+    <Content Include="ADMIN\js\colorfulTab.min.js" />
+    <Content Include="ADMIN\js\contact_me.js" />
+    <Content Include="ADMIN\js\index.js" />
+    <Content Include="ADMIN\js\jqBootstrapValidation.js" />
+    <Content Include="ADMIN\js\jQuery.lightninBox.js" />
+    <Content Include="ADMIN\js\jquery.min.js" />
+    <Content Include="ADMIN\js\SmoothScroll.min.js" />
+    <Content Include="ADMIN\js\top.js" />
+    <Content Include="ADMIN\view_feedback.aspx" />
+    <Content Include="BRANCH\add_status.aspx" />
+    <Content Include="BRANCH\branch_home.aspx" />
+    <Content Include="BRANCH\css\bootstrap.min.css" />
+    <Content Include="BRANCH\css\colorfulTab.min.css" />
+    <Content Include="BRANCH\css\font-awesome.min.css" />
+    <Content Include="BRANCH\css\icons.css" />
+    <Content Include="BRANCH\css\jQuery.lightninBox.css" />
+    <Content Include="BRANCH\css\style.css" />
+    <Content Include="BRANCH\css\typo.css" />
+    <Content Include="BRANCH\images\australia.png" />
+    <Content Include="BRANCH\images\banner1-1.jpg" />
+    <Content Include="BRANCH\images\banner1-2.jpg" />
+    <Content Include="BRANCH\images\banner1-3.jpg" />
+    <Content Include="BRANCH\images\banner1-4.jpg" />
+    <Content Include="BRANCH\images\banner1.jpg" />
+    <Content Include="BRANCH\images\banner2.jpg" />
+    <Content Include="BRANCH\images\banner3.jpg" />
+    <Content Include="BRANCH\images\bg.jpg" />
+    <Content Include="BRANCH\images\cart.png" />
+    <Content Include="BRANCH\images\cd-top-arrow.svg" />
+    <Content Include="BRANCH\images\check.png" />
+    <Content Include="BRANCH\images\close.png" />
+    <Content Include="BRANCH\images\confirm.png" />
+    <Content Include="BRANCH\images\cust-img1.jpg" />
+    <Content Include="BRANCH\images\cust-img2.jpg" />
+    <Content Include="BRANCH\images\cust-img3.jpg" />
+    <Content Include="BRANCH\images\cust-img4.jpg" />
+    <Content Include="BRANCH\images\cust-img5.jpg" />
+    <Content Include="BRANCH\images\cust-img6.jpg" />
+    <Content Include="BRANCH\images\delivery.png" />
+    <Content Include="BRANCH\images\dispatch.png" />
+    <Content Include="BRANCH\images\eye.png" />
+    <Content Include="BRANCH\images\france.png" />
+    <Content Include="BRANCH\images\germany.png" />
+    <Content Include="BRANCH\images\monitor.png" />
+    <Content Include="BRANCH\images\next.png" />
+    <Content Include="BRANCH\images\prev.png" />
+    <Content Include="BRANCH\images\process.png" />
+    <Content Include="BRANCH\images\quality.png" />
+    <Content Include="BRANCH\images\serv-img1.jpg" />
+    <Content Include="BRANCH\images\serv-img2.jpg" />
+    <Content Include="BRANCH\images\serv-img3.jpg" />
+    <Content Include="BRANCH\images\serv-img4.jpg" />
+    <Content Include="BRANCH\images\service1.jpg" />
+    <Content Include="BRANCH\images\service2.jpg" />
+    <Content Include="BRANCH\images\service3.jpg" />
+    <Content Include="BRANCH\images\shop.png" />
+    <Content Include="BRANCH\images\team1.jpg" />
+    <Content Include="BRANCH\images\team2.jpg" />
+    <Content Include="BRANCH\images\team3.jpg" />
+    <Content Include="BRANCH\images\team4.jpg" />
+    <Content Include="BRANCH\images\team5.jpg" />
+    <Content Include="BRANCH\images\team6.jpg" />
+    <Content Include="BRANCH\images\truck.png" />
+    <Content Include="BRANCH\images\uk.png" />
+    <Content Include="BRANCH\images\usa.png" />
+    <Content Include="BRANCH\images\work1.jpg" />
+    <Content Include="BRANCH\images\work10.jpg" />
+    <Content Include="BRANCH\images\work11.jpg" />
+    <Content Include="BRANCH\images\work12.jpg" />
+    <Content Include="BRANCH\images\work2.jpg" />
+    <Content Include="BRANCH\images\work3.jpg" />
+    <Content Include="BRANCH\images\work4.jpg" />
+    <Content Include="BRANCH\images\work5.jpg" />
+    <Content Include="BRANCH\images\work6.jpg" />
+    <Content Include="BRANCH\images\work7.jpg" />
+    <Content Include="BRANCH\images\work8.jpg" />
+    <Content Include="BRANCH\images\work9.jpg" />
+    <Content Include="BRANCH\index.html" />
+    <Content Include="BRANCH\js\bgfader.js" />
+    <Content Include="BRANCH\js\bootstrap.min.js" />
+    <Content Include="BRANCH\js\colorfulTab.min.js" />
+    <Content Include="BRANCH\js\contact_me.js" />
+    <Content Include="BRANCH\js\index.js" />
+    <Content Include="BRANCH\js\jqBootstrapValidation.js" />
+    <Content Include="BRANCH\js\jQuery.lightninBox.js" />
+    <Content Include="BRANCH\js\jquery.min.js" />
+    <Content Include="BRANCH\js\SmoothScroll.min.js" />
+    <Content Include="BRANCH\js\top.js" />
+    <Content Include="BRANCH\view_order_details.aspx" />
+    <Content Include="COMPANY\add_branch_details.aspx" />
+    <Content Include="COMPANY\add_package.aspx" />
+    <Content Include="COMPANY\assign_work_branch.aspx" />
+    <Content Include="COMPANY\company_changepwd.aspx" />
+    <Content Include="COMPANY\company_editprof.aspx" />
+    <Content Include="COMPANY\company_feedback.aspx" />
+    <Content Include="COMPANY\company_home.aspx" />
+    <Content Include="COMPANY\css\bootstrap.min.css" />
+    <Content Include="COMPANY\css\colorfulTab.min.css" />
+    <Content Include="COMPANY\css\font-awesome.min.css" />
+    <Content Include="COMPANY\css\icons.css" />
+    <Content Include="COMPANY\css\jQuery.lightninBox.css" />
+    <Content Include="COMPANY\css\style.css" />
+    <Content Include="COMPANY\css\typo.css" />
+    <Content Include="COMPANY\images\australia.png" />
+    <Content Include="COMPANY\images\banner1-1.jpg" />
+    <Content Include="COMPANY\images\banner1-2.jpg" />
+    <Content Include="COMPANY\images\banner1-3.jpg" />
+    <Content Include="COMPANY\images\banner1-4.jpg" />
+    <Content Include="COMPANY\images\banner1.jpg" />
+    <Content Include="COMPANY\images\banner2.jpg" />
+    <Content Include="COMPANY\images\banner3.jpg" />
+    <Content Include="COMPANY\images\bg.jpg" />
+    <Content Include="COMPANY\images\cart.png" />
+    <Content Include="COMPANY\images\cd-top-arrow.svg" />
+    <Content Include="COMPANY\images\check.png" />
+    <Content Include="COMPANY\images\close.png" />
+    <Content Include="COMPANY\images\confirm.png" />
+    <Content Include="COMPANY\images\cust-img1.jpg" />
+    <Content Include="COMPANY\images\cust-img2.jpg" />
+    <Content Include="COMPANY\images\cust-img3.jpg" />
+    <Content Include="COMPANY\images\cust-img4.jpg" />
+    <Content Include="COMPANY\images\cust-img5.jpg" />
+    <Content Include="COMPANY\images\cust-img6.jpg" />
+    <Content Include="COMPANY\images\delivery.png" />
+    <Content Include="COMPANY\images\dispatch.png" />
+    <Content Include="COMPANY\images\eye.png" />
+    <Content Include="COMPANY\images\france.png" />
+    <Content Include="COMPANY\images\germany.png" />
+    <Content Include="COMPANY\images\monitor.png" />
+    <Content Include="COMPANY\images\next.png" />
+    <Content Include="COMPANY\images\prev.png" />
+    <Content Include="COMPANY\images\process.png" />
+    <Content Include="COMPANY\images\quality.png" />
+    <Content Include="COMPANY\images\serv-img1.jpg" />
+    <Content Include="COMPANY\images\serv-img2.jpg" />
+    <Content Include="COMPANY\images\serv-img3.jpg" />
+    <Content Include="COMPANY\images\serv-img4.jpg" />
+    <Content Include="COMPANY\images\service1.jpg" />
+    <Content Include="COMPANY\images\service2.jpg" />
+    <Content Include="COMPANY\images\service3.jpg" />
+    <Content Include="COMPANY\images\shop.png" />
+    <Content Include="COMPANY\images\team1.jpg" />
+    <Content Include="COMPANY\images\team2.jpg" />
+    <Content Include="COMPANY\images\team3.jpg" />
+    <Content Include="COMPANY\images\team4.jpg" />
+    <Content Include="COMPANY\images\team5.jpg" />
+    <Content Include="COMPANY\images\team6.jpg" />
+    <Content Include="COMPANY\images\truck.png" />
+    <Content Include="COMPANY\images\uk.png" />
+    <Content Include="COMPANY\images\usa.png" />
+    <Content Include="COMPANY\images\work1.jpg" />
+    <Content Include="COMPANY\images\work10.jpg" />
+    <Content Include="COMPANY\images\work11.jpg" />
+    <Content Include="COMPANY\images\work12.jpg" />
+    <Content Include="COMPANY\images\work2.jpg" />
+    <Content Include="COMPANY\images\work3.jpg" />
+    <Content Include="COMPANY\images\work4.jpg" />
+    <Content Include="COMPANY\images\work5.jpg" />
+    <Content Include="COMPANY\images\work6.jpg" />
+    <Content Include="COMPANY\images\work7.jpg" />
+    <Content Include="COMPANY\images\work8.jpg" />
+    <Content Include="COMPANY\images\work9.jpg" />
+    <Content Include="COMPANY\index.html" />
+    <Content Include="COMPANY\js\bgfader.js" />
+    <Content Include="COMPANY\js\bootstrap.min.js" />
+    <Content Include="COMPANY\js\colorfulTab.min.js" />
+    <Content Include="COMPANY\js\contact_me.js" />
+    <Content Include="COMPANY\js\index.js" />
+    <Content Include="COMPANY\js\jqBootstrapValidation.js" />
+    <Content Include="COMPANY\js\jQuery.lightninBox.js" />
+    <Content Include="COMPANY\js\jquery.min.js" />
+    <Content Include="COMPANY\js\SmoothScroll.min.js" />
+    <Content Include="COMPANY\js\top.js" />
+    <Content Include="COMPANY\view_orderdetails.aspx" />
+    <Content Include="HOME\aboutus.aspx" />
+    <Content Include="HOME\contactus.aspx" />
+    <Content Include="HOME\css\bootstrap.min.css" />
+    <Content Include="HOME\css\colorfulTab.min.css" />
+    <Content Include="HOME\css\font-awesome.min.css" />
+    <Content Include="HOME\css\icons.css" />
+    <Content Include="HOME\css\jQuery.lightninBox.css" />
+    <Content Include="HOME\css\style.css" />
+    <Content Include="HOME\css\typo.css" />
+    <Content Include="HOME\home.aspx" />
+    <Content Include="HOME\images\australia.png" />
+    <Content Include="HOME\images\banner1-1.jpg" />
+    <Content Include="HOME\images\banner1-2.jpg" />
+    <Content Include="HOME\images\banner1-3.jpg" />
+    <Content Include="HOME\images\banner1-4.jpg" />
+    <Content Include="HOME\images\banner1.jpg" />
+    <Content Include="HOME\images\banner2.jpg" />
+    <Content Include="HOME\images\banner3.jpg" />
+    <Content Include="HOME\images\bg.jpg" />
+    <Content Include="HOME\images\cart.png" />
+    <Content Include="HOME\images\cd-top-arrow.svg" />
+    <Content Include="HOME\images\check.png" />
+    <Content Include="HOME\images\close.png" />
+    <Content Include="HOME\images\confirm.png" />
+    <Content Include="HOME\images\cust-img1.jpg" />
+    <Content Include="HOME\images\cust-img2.jpg" />
+    <Content Include="HOME\images\cust-img3.jpg" />
+    <Content Include="HOME\images\cust-img4.jpg" />
+    <Content Include="HOME\images\cust-img5.jpg" />
+    <Content Include="HOME\images\cust-img6.jpg" />
+    <Content Include="HOME\images\delivery.png" />
+    <Content Include="HOME\images\dispatch.png" />
+    <Content Include="HOME\images\eye.png" />
+    <Content Include="HOME\images\france.png" />
+    <Content Include="HOME\images\germany.png" />
+    <Content Include="HOME\images\monitor.png" />
+    <Content Include="HOME\images\next.png" />
+    <Content Include="HOME\images\prev.png" />
+    <Content Include="HOME\images\process.png" />
+    <Content Include="HOME\images\quality.png" />
+    <Content Include="HOME\images\serv-img1.jpg" />
+    <Content Include="HOME\images\serv-img2.jpg" />
+    <Content Include="HOME\images\serv-img3.jpg" />
+    <Content Include="HOME\images\serv-img4.jpg" />
+    <Content Include="HOME\images\service1.jpg" />
+    <Content Include="HOME\images\service2.jpg" />
+    <Content Include="HOME\images\service3.jpg" />
+    <Content Include="HOME\images\shop.png" />
+    <Content Include="HOME\images\team1.jpg" />
+    <Content Include="HOME\images\team2.jpg" />
+    <Content Include="HOME\images\team3.jpg" />
+    <Content Include="HOME\images\team4.jpg" />
+    <Content Include="HOME\images\team5.jpg" />
+    <Content Include="HOME\images\team6.jpg" />
+    <Content Include="HOME\images\truck.png" />
+    <Content Include="HOME\images\uk.png" />
+    <Content Include="HOME\images\usa.png" />
+    <Content Include="HOME\images\work1.jpg" />
+    <Content Include="HOME\images\work10.jpg" />
+    <Content Include="HOME\images\work11.jpg" />
+    <Content Include="HOME\images\work12.jpg" />
+    <Content Include="HOME\images\work2.jpg" />
+    <Content Include="HOME\images\work3.jpg" />
+    <Content Include="HOME\images\work4.jpg" />
+    <Content Include="HOME\images\work5.jpg" />
+    <Content Include="HOME\images\work6.jpg" />
+    <Content Include="HOME\images\work7.jpg" />
+    <Content Include="HOME\images\work8.jpg" />
+    <Content Include="HOME\images\work9.jpg" />
+    <Content Include="HOME\index.html" />
+    <Content Include="HOME\js\bgfader.js" />
+    <Content Include="HOME\js\bootstrap.min.js" />
+    <Content Include="HOME\js\colorfulTab.min.js" />
+    <Content Include="HOME\js\contact_me.js" />
+    <Content Include="HOME\js\index.js" />
+    <Content Include="HOME\js\jqBootstrapValidation.js" />
+    <Content Include="HOME\js\jQuery.lightninBox.js" />
+    <Content Include="HOME\js\jquery.min.js" />
+    <Content Include="HOME\js\SmoothScroll.min.js" />
+    <Content Include="HOME\js\top.js" />
+    <Content Include="HOME\service.html" />
+    <Content Include="HOME\services.aspx" />
+    <Content Include="REGISTRATION\company_reg.aspx" />
+    <Content Include="REGISTRATION\forgot_password.aspx" />
+    <Content Include="REGISTRATION\images\delivery %282%29.jpg" />
+    <Content Include="REGISTRATION\images\delivery%282%29.jpg" />
+    <Content Include="REGISTRATION\images\Delivery_2_3.jpg" />
+    <Content Include="REGISTRATION\images\img01.jpg" />
+    <Content Include="REGISTRATION\images\img02.jpg" />
+    <Content Include="REGISTRATION\images\img03.png" />
+    <Content Include="REGISTRATION\images\img04.jpg" />
+    <Content Include="REGISTRATION\images\img05.jpg" />
+    <Content Include="REGISTRATION\images\img06.jpg" />
+    <Content Include="REGISTRATION\images\img07.jpg" />
+    <Content Include="REGISTRATION\images\img08.jpg" />
+    <Content Include="REGISTRATION\images\KL1.jpg" />
+    <Content Include="REGISTRATION\images\low.jpg" />
+    <Content Include="REGISTRATION\index.html" />
+    <Content Include="REGISTRATION\login.aspx" />
+    <Content Include="REGISTRATION\logout.aspx" />
+    <Content Include="REGISTRATION\style.css" />
+    <Content Include="REGISTRATION\user_reg.aspx" />
+    <Content Include="USER\css\bootstrap.min.css" />
+    <Content Include="USER\css\colorfulTab.min.css" />
+    <Content Include="USER\css\font-awesome.min.css" />
+    <Content Include="USER\css\icons.css" />
+    <Content Include="USER\css\jQuery.lightninBox.css" />
+    <Content Include="USER\css\style.css" />
+    <Content Include="USER\css\typo.css" />
+    <Content Include="USER\enquiry_form.aspx" />
+    <Content Include="USER\images\australia.png" />
+    <Content Include="USER\images\banner1-1.jpg" />
+    <Content Include="USER\images\banner1-2.jpg" />
+    <Content Include="USER\images\banner1-3.jpg" />
+    <Content Include="USER\images\banner1-4.jpg" />
+    <Content Include="USER\images\banner1.jpg" />
+    <Content Include="USER\images\banner2.jpg" />
+    <Content Include="USER\images\banner3.jpg" />
+    <Content Include="USER\images\bg.jpg" />
+    <Content Include="USER\images\cart.png" />
+    <Content Include="USER\images\cd-top-arrow.svg" />
+    <Content Include="USER\images\check.png" />
+    <Content Include="USER\images\close.png" />
+    <Content Include="USER\images\confirm.png" />
+    <Content Include="USER\images\cust-img1.jpg" />
+    <Content Include="USER\images\cust-img2.jpg" />
+    <Content Include="USER\images\cust-img3.jpg" />
+    <Content Include="USER\images\cust-img4.jpg" />
+    <Content Include="USER\images\cust-img5.jpg" />
+    <Content Include="USER\images\cust-img6.jpg" />
+    <Content Include="USER\images\delivery.png" />
+    <Content Include="USER\images\dispatch.png" />
+    <Content Include="USER\images\eye.png" />
+    <Content Include="USER\images\france.png" />
+    <Content Include="USER\images\germany.png" />
+    <Content Include="USER\images\monitor.png" />
+    <Content Include="USER\images\next.png" />
+    <Content Include="USER\images\prev.png" />
+    <Content Include="USER\images\process.png" />
+    <Content Include="USER\images\quality.png" />
+    <Content Include="USER\images\serv-img1.jpg" />
+    <Content Include="USER\images\serv-img2.jpg" />
+    <Content Include="USER\images\serv-img3.jpg" />
+    <Content Include="USER\images\serv-img4.jpg" />
+    <Content Include="USER\images\service1.jpg" />
+    <Content Include="USER\images\service2.jpg" />
+    <Content Include="USER\images\service3.jpg" />
+    <Content Include="USER\images\shop.png" />
+    <Content Include="USER\images\team1.jpg" />
+    <Content Include="USER\images\team2.jpg" />
+    <Content Include="USER\images\team3.jpg" />
+    <Content Include="USER\images\team4.jpg" />
+    <Content Include="USER\images\team5.jpg" />
+    <Content Include="USER\images\team6.jpg" />
+    <Content Include="USER\images\truck.png" />
+    <Content Include="USER\images\uk.png" />
+    <Content Include="USER\images\usa.png" />
+    <Content Include="USER\images\work1.jpg" />
+    <Content Include="USER\images\work10.jpg" />
+    <Content Include="USER\images\work11.jpg" />
+    <Content Include="USER\images\work12.jpg" />
+    <Content Include="USER\images\work2.jpg" />
+    <Content Include="USER\images\work3.jpg" />
+    <Content Include="USER\images\work4.jpg" />
+    <Content Include="USER\images\work5.jpg" />
+    <Content Include="USER\images\work6.jpg" />
+    <Content Include="USER\images\work7.jpg" />
+    <Content Include="USER\images\work8.jpg" />
+    <Content Include="USER\images\work9.jpg" />
+    <Content Include="USER\index.html" />
+    <Content Include="USER\js\bgfader.js" />
+    <Content Include="USER\js\bootstrap.min.js" />
+    <Content Include="USER\js\colorfulTab.min.js" />
+    <Content Include="USER\js\contact_me.js" />
+    <Content Include="USER\js\index.js" />
+    <Content Include="USER\js\jqBootstrapValidation.js" />
+    <Content Include="USER\js\jQuery.lightninBox.js" />
+    <Content Include="USER\js\jquery.min.js" />
+    <Content Include="USER\js\SmoothScroll.min.js" />
+    <Content Include="USER\js\top.js" />
+    <Content Include="USER\order.aspx" />
+    <Content Include="USER\search_comany.aspx" />
+    <Content Include="USER\track_now.aspx" />
+    <Content Include="USER\user_changepass.aspx" />
+    <Content Include="USER\user_editprof.aspx" />
+    <Content Include="USER\user_feedback.aspx" />
+    <Content Include="USER\user_home.aspx" />
+    <Content Include="USER\view_company_more.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADMIN\add_designation.aspx.cs">
+      <DependentUpon>add_designation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\add_designation.aspx.designer.cs">
+      <DependentUpon>add_designation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\add_district.aspx.cs">
+      <DependentUpon>add_district.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\add_district.aspx.designer.cs">
+      <DependentUpon>add_district.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\admin_home.aspx.cs">
+      <DependentUpon>admin_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\admin_home.aspx.designer.cs">
+      <DependentUpon>admin_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\admin_master.Master.cs">
+      <DependentUpon>admin_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\admin_master.Master.designer.cs">
+      <DependentUpon>admin_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\confirm_company.aspx.cs">
+      <DependentUpon>confirm_company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\confirm_company.aspx.designer.cs">
+      <DependentUpon>confirm_company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\confirm_user.aspx.cs">
+      <DependentUpon>confirm_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\confirm_user.aspx.designer.cs">
+      <DependentUpon>confirm_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\view_feedback.aspx.cs">
+      <DependentUpon>view_feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\view_feedback.aspx.designer.cs">
+      <DependentUpon>view_feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BRANCH\add_status.aspx.cs">
+      <DependentUpon>add_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BRANCH\add_status.aspx.designer.cs">
+      <DependentUpon>add_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BRANCH\branch_home.aspx.cs">
+      <DependentUpon>branch_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BRANCH\branch_home.aspx.designer.cs">
+      <DependentUpon>branch_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BRANCH\branch_master.Master.cs">
+      <DependentUpon>branch_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BRANCH\branch_master.Master.designer.cs">
+      <DependentUpon>branch_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BRANCH\view_order_details.aspx.cs">
+      <DependentUpon>view_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BRANCH\view_order_details.aspx.designer.cs">
+      <DependentUpon>view_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\add_branch_details.aspx.cs">
+      <DependentUpon>add_branch_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\add_branch_details.aspx.designer.cs">
+      <DependentUpon>add_branch_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\add_package.aspx.cs">
+      <DependentUpon>add_package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\add_package.aspx.designer.cs">
+      <DependentUpon>add_package.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\assign_work_branch.aspx.cs">
+      <DependentUpon>assign_work_branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\assign_work_branch.aspx.designer.cs">
+      <DependentUpon>assign_work_branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\company_changepwd.aspx.cs">
+      <DependentUpon>company_changepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\company_changepwd.aspx.designer.cs">
+      <DependentUpon>company_changepwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\company_editprof.aspx.cs">
+      <DependentUpon>company_editprof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\company_editprof.aspx.designer.cs">
+      <DependentUpon>company_editprof.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\company_feedback.aspx.cs">
+      <DependentUpon>company_feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\company_feedback.aspx.designer.cs">
+      <DependentUpon>company_feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\company_home.aspx.cs">
+      <DependentUpon>company_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\company_home.aspx.designer.cs">
+      <DependentUpon>company_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\compny_master.Master.cs">
+      <DependentUpon>compny_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\compny_master.Master.designer.cs">
+      <DependentUpon>compny_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY\view_orderdetails.aspx.cs">
+      <DependentUpon>view_orderdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COMPANY\view_orderdetails.aspx.designer.cs">
+      <DependentUpon>view_orderdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBoperation.cs" />
+    <Compile Include="HOME\aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME\contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME\home_master.Master.cs">
+      <DependentUpon>home_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\home_master.Master.designer.cs">
+      <DependentUpon>home_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HOME\services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME\service_master.Master.cs">
+      <DependentUpon>service_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME\service_master.Master.designer.cs">
+      <DependentUpon>service_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REGISTRATION\company_reg.aspx.cs">
+      <DependentUpon>company_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\company_reg.aspx.designer.cs">
+      <DependentUpon>company_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRATION\forgot_password.aspx.cs">
+      <DependentUpon>forgot_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\forgot_password.aspx.designer.cs">
+      <DependentUpon>forgot_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRATION\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRATION\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRATION\registration_master.Master.cs">
+      <DependentUpon>registration_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\registration_master.Master.designer.cs">
+      <DependentUpon>registration_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRATION\user_reg.aspx.cs">
+      <DependentUpon>user_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REGISTRATION\user_reg.aspx.designer.cs">
+      <DependentUpon>user_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\enquiry_form.aspx.cs">
+      <DependentUpon>enquiry_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\enquiry_form.aspx.designer.cs">
+      <DependentUpon>enquiry_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\search_comany.aspx.cs">
+      <DependentUpon>search_comany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\search_comany.aspx.designer.cs">
+      <DependentUpon>search_comany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\track_now.aspx.cs">
+      <DependentUpon>track_now.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\track_now.aspx.designer.cs">
+      <DependentUpon>track_now.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\user_changepass.aspx.cs">
+      <DependentUpon>user_changepass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\user_changepass.aspx.designer.cs">
+      <DependentUpon>user_changepass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\user_editprof.aspx.cs">
+      <DependentUpon>user_editprof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\user_editprof.aspx.designer.cs">
+      <DependentUpon>user_editprof.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\user_feedback.aspx.cs">
+      <DependentUpon>user_feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\user_feedback.aspx.designer.cs">
+      <DependentUpon>user_feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\user_home.aspx.cs">
+      <DependentUpon>user_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\user_home.aspx.designer.cs">
+      <DependentUpon>user_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USER\user_master.Master.cs">
+      <DependentUpon>user_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\user_master.Master.designer.cs">
+      <DependentUpon>user_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="USER\view_company_more.aspx.cs">
+      <DependentUpon>view_company_more.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USER\view_company_more.aspx.designer.cs">
+      <DependentUpon>view_company_more.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="REGISTRATION\registration_master.Master" />
+    <Content Include="COMPANY\compny_master.Master" />
+    <Content Include="ADMIN\admin_master.Master" />
+    <Content Include="BRANCH\branch_master.Master" />
+    <Content Include="USER\user_master.Master" />
+    <Content Include="HOME\home_master.Master" />
+    <Content Include="HOME\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HOME\fonts\fontawesome-webfont.woff" />
+    <Content Include="HOME\fonts\fontawesome-webfont.woff2" />
+    <Content Include="HOME\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="HOME\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="HOME\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="ADMIN\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ADMIN\fonts\fontawesome-webfont.woff" />
+    <Content Include="ADMIN\fonts\fontawesome-webfont.woff2" />
+    <Content Include="ADMIN\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="ADMIN\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ADMIN\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="HOME\service_master.Master" />
+    <Content Include="COMPANY\fonts\fontawesome-webfont.ttf" />
+    <Content Include="COMPANY\fonts\fontawesome-webfont.woff" />
+    <Content Include="COMPANY\fonts\fontawesome-webfont.woff2" />
+    <Content Include="COMPANY\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="COMPANY\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="COMPANY\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="BRANCH\fonts\fontawesome-webfont.ttf" />
+    <Content Include="BRANCH\fonts\fontawesome-webfont.woff" />
+    <Content Include="BRANCH\fonts\fontawesome-webfont.woff2" />
+    <Content Include="BRANCH\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BRANCH\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BRANCH\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="USER\fonts\fontawesome-webfont.ttf" />
+    <Content Include="USER\fonts\fontawesome-webfont.woff" />
+    <Content Include="USER\fonts\fontawesome-webfont.woff2" />
+    <Content Include="USER\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="USER\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="USER\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7057/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

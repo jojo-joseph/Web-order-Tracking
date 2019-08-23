@@ -1,0 +1,10 @@
+c:\users\prajitha\documents\visual studio 2012\Projects\web_order_tracking\bin\web_order_tracking.dll
+c:\users\prajitha\documents\visual studio 2012\Projects\web_order_tracking\bin\web_order_tracking.pdb
+c:\users\prajitha\documents\visual studio 2012\Projects\web_order_tracking\obj\Debug\web_order_tracking.csprojResolveAssemblyReference.cache
+c:\users\prajitha\documents\visual studio 2012\Projects\web_order_tracking\obj\Debug\web_order_tracking.dll
+c:\users\prajitha\documents\visual studio 2012\Projects\web_order_tracking\obj\Debug\web_order_tracking.pdb
+D:\MAIN PROJECT\web_order_tracking\bin\web_order_tracking.dll
+D:\MAIN PROJECT\web_order_tracking\bin\web_order_tracking.pdb
+D:\MAIN PROJECT\web_order_tracking\obj\Debug\web_order_tracking.csprojResolveAssemblyReference.cache
+D:\MAIN PROJECT\web_order_tracking\obj\Debug\web_order_tracking.dll
+D:\MAIN PROJECT\web_order_tracking\obj\Debug\web_order_tracking.pdb
